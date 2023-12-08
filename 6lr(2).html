@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Вывод элементов k-го столбца матрицы</h2>
+
+<script>
+  function printKthColumn() {
+    var m = parseInt(prompt("Введите количество строк M:"));
+    var n = parseInt(prompt("Введите количество столбцов N:"));
+
+    var matrix = [];
+    var matrixInput = "Матрица " + m + "x" + n + ": \n";
+
+    for (var i = 0; i < m; i++) {
+      matrix.push([]);
+      for (var j = 0; j < n; j++) {
+        var value = prompt("Введите элемент матрицы [" + (i + 1) + "][" + (j + 1) + "]");
+        matrix[i].push(parseInt(value));
+        matrixInput += value + " ";
+      }
+      matrixInput += "\n";
+    }
+
+    var k = parseInt(prompt("Введите номер столбца k (от 1 до N):"));
+    var result = "Элементы " + k + "-го столбца: \n";
+
+    for (var i = 0; i < m; i++) {
+      result += matrix[i][k - 1] + "\n";
+    }
+
+    alert(result);
+  }
+</script>
+<button onclick="printKthColumn()">Вывести k-й столбец</button>
+
+</body>
+</html>
+

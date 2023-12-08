@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение нового числа</title>
+</head>
+<body>
+    <script>
+      function f(x, c) {
+        let xStr = x.toString(); 
+        let yStr = xStr + c;
+        let y = parseInt(yStr, 10);
+        return y;
+      }
+      let inputX = prompt("Введите x:");
+      let inputC = prompt("Введите c:");
+
+      let x = parseInt(inputX, 10);
+      let c = parseInt(inputC, 10);
+
+      let result = f(x, c);
+      alert("Результат: " + result);
+    </script>
+</body>
+</html>
+        
+
+
+
